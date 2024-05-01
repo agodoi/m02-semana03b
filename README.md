@@ -79,6 +79,7 @@ Note que a coluna **id_customer** está em ordem crescente, e o JOIN INNER junto
 ### Tabela Pedidos
 
 **Primary key =** id_order
+
 **Foreign key** = id_customer
 
 <picture>
