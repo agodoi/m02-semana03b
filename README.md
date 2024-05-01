@@ -64,13 +64,22 @@ Se aplicar **INNER JOIN** para combinar as informações de clientes com os pedi
 
 | id_customer | name  | country  | id_order | value |
 |----------|----------|----------|----------|----------|
-| 1      | João       | Brasil   |  1       | 100      |
-| 2      | Pedro      | Chile    |  3       | 150      |
-| 2      | Pedro      | Chile    |  4       | 300      |
-| 4      | Ana        | EUA      |  2       | 200      |
+| 1        | João     | Brasil   |  1       | 100      |
+| 2        | Pedro    | Chile    |  3       | 150      |
+| 2        | Pedro    | Chile    |  4       | 300      |
+| 4        | Ana      | EUA      |  2       | 200      |
 
 
+Note que a coluna **id_customer** está em ordem crescente, e o JOIN INNER juntou as duas tabelas **Clientes** e **Pedidos**.
 
+#### Tabela Clientes
+
+**Primary key =** id_customer
+
+#### Tabela Pedidos
+
+**Primary key =** id_order
+**Foreign key** = id_customer
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03a/blob/main/imgs/desespero.jpg">
