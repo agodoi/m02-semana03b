@@ -86,6 +86,11 @@ Note que a coluna **id_customer** está em ordem crescente, e o JOIN INNER junto
 
 **Foreign key** = id_customer
 
+```
+SELECT Clientes.id_customer, Clientes.name, Clientes.country, Pedidos.id_order, Pedidos.value
+FROM Clientes
+INNER JOIN Pedidos ON Clientes.id_customer = Pedidos.id_customer;
+```
 
 ## Paralelo com o Excel
 
