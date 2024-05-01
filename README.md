@@ -27,10 +27,27 @@ Por exemplo, suponha que você tenha uma tabela de clientes e outra de pedidos. 
 
 ## Tipos de Join
 
-* INNER JOIN --> retorna registros que têm valores correspondentes em ambas as tabelas.
-* LEFT JOIN --> retorna todos os registros da tabela da esquerda e os registros correspondentes da tabela da direita. Se não houver correspondência, os valores NULL são retornados da tabela da direita.
-* RIGHT JOIN --> retorna todos os registros da tabela da direita e os registros correspondentes da tabela da esquerda. Se não houver correspondência, os valores NULL são retornados da tabela da esquerda.
-* FULL JOIN --> retorna todos os registros quando há uma correspondência em uma das tabelas. As colunas da outra tabela terão valores NULL quando não houver correspondência.
+Os joins mais usados são:
+
+* INNER JOIN --> retorna linhas que têm valores correspondentes em ambas as tabelas.
+* LEFT JOIN --> retorna linhas da tabela da esquerda e as linhas correspondentes da tabela da direita. Se não houver correspondência, os valores NULL são retornados da tabela da direita.
+* RIGHT JOIN --> retorna as linhas da tabela da direita e as linhas correspondentes da tabela da esquerda. Se não houver correspondência, os valores NULL são retornados da tabela da esquerda.
+* FULL JOIN --> retorna linhas quando há uma correspondência em uma das tabelas. As colunas da outra tabela terão valores NULL quando não houver correspondência.
+* CROSS JOIN --> combina cada linha de uma tabela com todas as linhas da outra tabela, resultando em tabela A * tabela B. Cuidado que esse comando pode retornar um grande volume de dados.
+* Self JOIN --> une uma tabela a si mesma, permitindo consultas hierárquicas ou aninhadas.
+* UNION JOIN --> combina os resultados de duas ou mais consultas em um único conjunto de resultados.
+* EXCEPT JOIN --> retorna as linhas de uma tabela que não estão presentes em outra tabela.
+* INTERSECT JOIN --> retorna as linhas que estão presentes em ambas as tabelas.
+
+| ID Customer | Name | Country |
+|----------|----------|----------|
+| 1   | João   | Brasil   |
+| 2   | Pedro   | Chile   |
+| 3   | Rafael |   França |
+
+
+
+
 
 
 
