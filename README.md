@@ -52,6 +52,8 @@ Os joins mais usados são:
 
 ### Planilha Pedidos
 
+Nessa planilha de Pedidos, tem-se os pedidos identificados de 1 a 4, mas apenas os clientes 1, 2 e 4 consumiram algum valor.
+
 | id_order | id_customer  | value |
 |----------|----------|----------|
 | 1        | 1        | 100      |
@@ -60,7 +62,9 @@ Os joins mais usados são:
 | 4        | 2        | 300      |
 
 
-Se aplicar **INNER JOIN** para combinar as informações de clientes com os pedidos que cada cliente fez, o resultado será:
+Se aplicar **INNER JOIN** para combinar as informações de **Clientes** com os **Pedidos**, o resultado será:
+
+Em outra palavras, vamos selecionar o **id_customer**, **name** e **country** da tabela "Clientes", bem como o **id_order** e **value** da tabela **Pedidos**, combinando os registros onde o **id_customer** é igual em ambas as tabelas.
 
 | id_customer | name  | country  | id_order | value |
 |----------|----------|----------|----------|----------|
@@ -81,6 +85,9 @@ Note que a coluna **id_customer** está em ordem crescente, e o JOIN INNER junto
 **Primary key =** id_order
 
 **Foreign key** = id_customer
+
+
+## Paralelo com o Excel
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03a/blob/main/imgs/desespero.jpg">
