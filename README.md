@@ -72,11 +72,11 @@ Se aplicar **INNER JOIN** para combinar as informações de clientes com os pedi
 
 Note que a coluna **id_customer** está em ordem crescente, e o JOIN INNER juntou as duas tabelas **Clientes** e **Pedidos**.
 
-#### Tabela Clientes
+### Tabela Clientes
 
 **Primary key =** id_customer
 
-#### Tabela Pedidos
+### Tabela Pedidos
 
 **Primary key =** id_order
 **Foreign key** = id_customer
