@@ -60,7 +60,14 @@ Os joins mais usados são:
 | 4         | 2      | 300   |
 
 
+Se aplicar **INNER JOIN** para combinar as informações de clientes com os pedidos que cada cliente fez, o resultado será:
 
+| id_customer | name | country | id_order | value |
+|----------|----------|----------|----------|----------|
+| 1      | João       | Brasil   |
+| 2      | Pedro      | Chile    |
+| 2      | Pedro      | Chile    |
+| 4      | Ana        | EUA      |
 
 
 
