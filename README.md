@@ -39,11 +39,25 @@ Os joins mais usados são:
 * EXCEPT JOIN --> retorna as linhas de uma tabela que não estão presentes em outra tabela.
 * INTERSECT JOIN --> retorna as linhas que estão presentes em ambas as tabelas.
 
-| ID Customer | Name | Country |
+
+### Planilha Clientes
+
+| id_customer | name | country |
 |----------|----------|----------|
 | 1   | João   | Brasil   |
 | 2   | Pedro   | Chile   |
 | 3   | Rafael |   França |
+| 4   | Ana   | EUA   |
+
+
+### Planilha Pedidos
+
+| id_order | id_customer  | value |
+|----------|----------|----------|
+| 1         | 1      | 100   |
+| 2         | 4      | 200   |
+| 3         | 2      | 150  |
+| 4         | 2      | 300   |
 
 
 
