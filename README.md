@@ -232,12 +232,19 @@ Vamos criar uma aplicação Sails do tipo WebApp e conectar o seu banco de dados
 
 
 <picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/joins.jpg">
-   <img alt="Desespero" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/joins.jpg)">
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_criado_zero.png">
+   <img alt="Desespero" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_criado_zero.png)">
 </picture>
 
+1.3) Na raiz da pasta, clique no arquivo **package.json** (penúltimo arquivo do menu vertical da esquerda). Aí dentro tem todas as dependências. Como estamos trabalhando com o **PostgreSQL**, não há pacotes default para ele. Então temos, que puxar manualmente. Então, digite **sails postgresql** no Google, e você vai cair nesse site [https://www.npmjs.com/package/sails-postgresql](https://www.npmjs.com/package/sails-postgresql)
 
-1.3) 
+1.4) Para instalar a biblioteca do **PostgreSQL no terminal usando esse comando ```npm i sails-postgresql```
+
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_criado_zero.png">
+   <img alt="Desespero" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_criado_zero.png)">
+</picture>
 
 ## Conclusões
 
