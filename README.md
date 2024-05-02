@@ -231,3 +231,6 @@ FROM notebooks n
 FULL JOIN manuais m ON n.id = m.modelo_id
 ORDER BY n.modelo, m.nome;
 ```
+
+Esta consulta SQL irá retornar todos os manuais associados a cada modelo de notebook, incluindo aqueles que não têm um manual correspondente (ou seja, modelos de notebook para os quais não há manual). Isso nos dará uma visão completa de quais manuais devem ser acessados na linha de produção para produzir cada modelo de notebook.
+
