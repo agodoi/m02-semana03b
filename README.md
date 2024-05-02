@@ -226,6 +226,14 @@ ORDER BY t.idade DESC, d.idade ASC;
 
 Vamos criar uma aplicação Sails do tipo WebApp e conectar o seu banco de dados que está no [https://dashboard.render.com/](https://dashboard.render.com/)
 
+Caso você não tenha instalado o Sails no seu PC, faça:
+
+#### Instale o NodeJS
+
+#### Vá no seu terminal e digite ```npm install sails -g```
+
+Maiores detalhes em [https://sailsjs.com/get-started](https://sailsjs.com/get-started)
+
 ### Etapa 1 - Criando um novo projeto Sails
 
 1.1) Abra um terminal CMD, e digite ```sail new projetoDell``` e escolha **1. Web App** e aguarde alguns minutinhos para instalar as dependências;
