@@ -281,8 +281,8 @@ Vamos criar uma aplicação Sails do tipo WebApp e conectar o seu banco de dados
 1.11) Vá no seu DBeaver, atualize seu banco e procure pela tabela **user**. Se você estiver vendo essa tabela, **PARABÉNS**. Merece um Bis.
 
 <picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_datastores.png">
-   <img alt="DataStores" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_datastores.png)">
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/dbeaver_comprovando_user.png">
+   <img alt="DataStores" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/dbeaver_comprovando_user.png)">
 </picture>
 
 ## Conclusões
