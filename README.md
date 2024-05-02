@@ -252,7 +252,7 @@ Vamos criar uma aplicação Sails do tipo WebApp e conectar o seu banco de dados
 1.7) Vamos conectar o seu banco através do Sails. Vá na seguinte pasta do seu projeto Sails:
 * **Config** (onde ficam as conexões)
 	* **datastores.js** (são as suas conexões de qualquer banco, tipo MySQL, PostgreSQL, etc)
- 		* **linha 51** onde tem ```// adapter: 'sails-mysql',```, apague e substitua por ```adapter: sails-postgresql``` sem as // barras
+ 		* **linha 51** onde tem ```// adapter: 'sails-mysql',```, apague e substitua por ```adapter: 'sails-postgresql',``` sem as // barras
    		* **linha 52** adicione ```url: postgres://bdgodoi_user:ZmTVzKJXGWyB65nRGeW7S2AkMUEI3gZ1@dpg-cojpieu3e1ms73bflb6g-a.oregon-postgres.render.com/bdgodoi``` 		
 
 ## Conclusões
