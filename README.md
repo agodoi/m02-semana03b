@@ -224,6 +224,11 @@ ORDER BY t.idade DESC, d.idade ASC;
 
 Vamos criar uma aplicação Sails do tipo WebApp e conectar o seu banco de dados que está no [https://dashboard.render.com/](https://dashboard.render.com/)
 
+### Etapa 1 - Criando um novo projeto Sails
+
+1.1) Abra um terminal CMD, e digite ```sail new projetoDell``` e escolha **1. Web App** e aguarde alguns minutinhos;
+
+1.2) Entre na pasta do seu projetoDell e digite ```code .``` para que essa pasta seja aberta no seu Visual Code  
 
 ## Conclusões
 
