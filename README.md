@@ -177,3 +177,57 @@ No seu projeto, cabe o INNER e o LEFT.
 INNER para juntar duas tabelas totalmente lisas e referenciadas sem problemas.
 
 LEFT serveria para vc emitir um relatório entre as tabela **pedidos** e **notebooks** e o que vier **NULL** na tabela **notebooks** siginfica que são manuais sem referência, perdidos ou obsoletos no seu banco de dados.
+
+Vamos criar uma situação hipotética onde a empresa DELL fabrica três modelos diferentes de notebooks: Inspiron, XPS e Alienware. Cada modelo tem seus próprios manuais de produção, e queremos usar um full join para visualizar quais manuais devem ser acessados para produzir cada modelo de notebook.
+
+Considere as seguintes tabelas:
+
+**Tabela notebooks:**
+
+* id: identificador único do modelo de notebook.
+* modelo: nome do modelo de notebook.
+
+**Tabela manuais:**
+
+* id: identificador único do manual.
+* modelo_id: identificador do modelo de notebook associado ao manual.
+* nome: nome do manual.
+
+```
+-- Criar a tabela notebooks
+CREATE TABLE notebooks (
+    id SERIAL PRIMARY KEY,
+    modelo VARCHAR(50)
+);
+
+-- Popular a tabela notebooks
+INSERT INTO notebooks (modelo) VALUES
+(1, 'Inspiron'),
+(2, 'XPS'),
+(3, 'Alienware');
+
+-- Criar a tabela manuais
+CREATE TABLE manuais (
+    id SERIAL PRIMARY KEY,
+    modelo_id INTEGER REFERENCES notebooks(id),
+    nome VARCHAR(100)
+);
+
+-- Popular a tabela manuais
+INSERT INTO manuais (modelo_id, nome) VALUES
+(1, 'Manual de Produção do Inspiron'),
+(2, 'Manual de Produção do XPS'),
+(3, 'Manual de Produção do Alienware'),
+(1, 'Guia de Montagem do Inspiron'),
+(2, 'Guia de Montagem do XPS');
+
+```
+
+Agora, podemos usar um full join para visualizar quais manuais estão disponíveis para cada modelo de notebook:
+
+```
+SELECT n.modelo, m.nome
+FROM notebooks n
+FULL JOIN manuais m ON n.id = m.modelo_id
+ORDER BY n.modelo, m.nome;
+```
