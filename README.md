@@ -269,7 +269,7 @@ Vamos criar uma aplicação Sails do tipo WebApp e conectar o seu banco de dados
 	* **models**
  		* **User.js** 
 
-1.9) Volte no terminal CMD e digite **sails lift** [enter] e aguarde **info: Starting app...** Se der pau, execute novamente **sails lift**
+1.9) Volte no terminal CMD e digite **sails lift** [enter] e aguarde **info: Starting app...** Se der pau, execute novamente **sails lift**. Esse comando faz criar as entidadades descritas em user.js. Em outras palavras, as tabelas do **user.js** são criadas no seu Render.
 
 1.10) Se você chegou nessa tela abaixo, então você teve sucesso na sua conexão do Render através do Sails.
 
@@ -278,7 +278,12 @@ Vamos criar uma aplicação Sails do tipo WebApp e conectar o seu banco de dados
    <img alt="Sails ok" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_conexao_ok.png)">
 </picture>
 
+1.11) Vá no seu DBeaver, atualize seu banco e procure pela tabela **user**. Se você estiver vendo essa tabela, **PARABÉNS**. Merece um Bis.
 
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_datastores.png">
+   <img alt="DataStores" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_datastores.png)">
+</picture>
 
 ## Conclusões
 
