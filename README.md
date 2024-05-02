@@ -278,7 +278,7 @@ Vamos criar uma aplicação Sails do tipo WebApp e conectar o seu banco de dados
    <img alt="Sails ok" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_conexao_ok.png)">
 </picture>
 
-1.11) Vá no seu DBeaver, atualize seu banco e procure pela tabela **user**. Se você estiver vendo essa tabela, **PARABÉNS**. Merece um Bis. Essa frase está sem destaque, então vá na mesa do prof sutilmente e pegue o seu Bis sem comentar com ninguém. Quem não for buscar o seu Bis, pode ser seu no final...
+1.11) Vá no seu DBeaver, atualize seu banco e procure pela tabela **user**. Se você estiver vendo essa tabela, **PARABÉNS**. Merece um Bis. Essa frase está sem destaque, então vá na mesa do prof sutilmente e pegue o seu Bis sem comentar com ninguém. Quem não buscar o próprio Bis, pode ser seu no final...
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/dbeaver_comprovando_user.png">
