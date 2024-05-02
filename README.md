@@ -73,6 +73,9 @@ Nesse caso, os itens 2 e 3 estão corretamente referenciados, logo, aparecerão 
    <img alt="Desespero" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/joins.jpg)">
 </picture>
 
+## Prática com Dbeaver
+
+Por favor, abra o seu DBeaver e cole esse código lá, mas execute os trechos em conjunto com o professor.
 
 ```
 DROP TABLE IF EXISTS pessoasHerois CASCADE;
@@ -171,7 +174,6 @@ FULL JOIN caracteristicas ON pessoasHerois.id = caracteristicas.chaveForeign;
 ```
 
 ## Consulta mais complexa
-
 
 ```
 SELECT 
