@@ -68,6 +68,12 @@ Nesse caso, os itens 2 e 3 estão corretamente referenciados, logo, aparecerão 
 * FULL JOIN --> retorna linhas quando há uma correspondência em uma das tabelas. As colunas da outra tabela terão valores NULL quando não houver correspondência.
 
 
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/joins.jpg">
+   <img alt="Desespero" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/joins.jpg)">
+</picture>
+
+
 ```
 DROP TABLE IF EXISTS pessoasHerois CASCADE;
 
@@ -162,16 +168,4 @@ RIGHT JOIN caracteristicas ON pessoasHerois.id = caracteristicas.chaveForeign;
 SELECT pessoasHerois.nome, pessoasHerois.sobrenome, caracteristicas.acessorio, caracteristicas.uniforme
 FROM pessoasHerois
 FULL JOIN caracteristicas ON pessoasHerois.id = caracteristicas.chaveForeign;
-
-
 ```
-
-
-
-## Paralelo com o Excel
-
-<picture>
-   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03a/blob/main/imgs/desespero.jpg">
-   <img alt="Desespero" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03a/blob/main/imgs/desespero.jpg)">
-</picture>
-
