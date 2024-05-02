@@ -187,11 +187,37 @@ ORDER BY t.idade DESC, d.idade ASC;
 ```
 
 * SELECT: Indica que estamos selecionando colunas específicas da consulta.
-	* t.nome AS TutorName: Estamos selecionando o nome do tutor da tabela tutor e renomeando-o como TutorName.
- 	* t.idade AS TutorAge: Estamos selecionando a idade do tutor da tabela tutor e renomeando-a como TutorAge.
-  	* t.endereco AS TutorAddress: Estamos selecionando o endereço do tutor da tabela tutor e renomeando-o como TutorAddress.
-  	* d.raca AS DogBreed: Estamos selecionando a raça do cachorro da tabela dog e renomeando-a como DogBreed.
-  	* d.idade AS DogAge: Estamos selecionando a idade do cachorro da tabela dog e renomeando-a como DogAge.
+	* t.nome AS TutorName: estamos selecionando o nome do tutor da tabela tutor e renomeando-o como TutorName.
+ 	* t.idade AS TutorAge: estamos selecionando a idade do tutor da tabela tutor e renomeando-a como TutorAge.
+  	* t.endereco AS TutorAddress: estamos selecionando o endereço do tutor da tabela tutor e renomeando-o como TutorAddress.
+  	* d.raca AS DogBreed: estamos selecionando a raça do cachorro da tabela dog e renomeando-a como DogBreed.
+  	* d.idade AS DogAge: estamos selecionando a idade do cachorro da tabela dog e renomeando-a como DogAge.
+
+```
+FROM tutor t
+INNER JOIN dog d ON t.id = d.tutor_id
+```
+
+* FROM: indica as tabelas de onde estamos selecionando os dados.
+* tutor t: estamos selecionando dados da tabela tutor e atribuindo um alias t para ela.
+* dog d: estamos selecionando dados da tabela dog e atribuindo um alias d para ela.
+* INNER JOIN: estamos fazendo uma junção interna entre as tabelas tutor e dog, usando a condição de que o id na tabela tutor deve ser igual ao tutor_id na tabela dog.
+
+```
+WHERE t.idade > 25 AND d.raca = 'Labrador'
+```
+
+* WHERE: estamos filtrando os resultados com base em algumas condições.
+* t.idade > 25: estamos selecionando apenas os registros onde a idade do tutor é maior que 25.
+* d.raca = 'Labrador': estamos selecionando apenas os registros onde a raça do cachorro é "Labrador".
+
+```
+ORDER BY t.idade DESC, d.idade ASC;
+```
+
+* ORDER BY: estamos ordenando os resultados.
+* t.idade DESC: estamos ordenando a idade do tutor em ordem decrescente (do maior para o menor).
+* d.idade ASC: estamos ordenando a idade do cachorro em ordem crescente (do menor para o maior).
 
 ## Conclusões
 
