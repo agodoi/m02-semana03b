@@ -226,9 +226,18 @@ Vamos criar uma aplicação Sails do tipo WebApp e conectar o seu banco de dados
 
 ### Etapa 1 - Criando um novo projeto Sails
 
-1.1) Abra um terminal CMD, e digite ```sail new projetoDell``` e escolha **1. Web App** e aguarde alguns minutinhos;
+1.1) Abra um terminal CMD, e digite ```sail new projetoDell``` e escolha **1. Web App** e aguarde alguns minutinhos para instalar as dependências;
 
-1.2) Entre na pasta do seu projetoDell e digite ```code .``` para que essa pasta seja aberta no seu Visual Code  
+1.2) Entre na pasta do seu **projetoDell** e digite ```code .``` para que essa pasta seja aberta no seu Visual Code;
+
+
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/joins.jpg">
+   <img alt="Desespero" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/joins.jpg)">
+</picture>
+
+
+1.3) 
 
 ## Conclusões
 
