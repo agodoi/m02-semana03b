@@ -55,10 +55,10 @@ Se aplicar **INNER JOIN** (JUNÇÃO INTERNA) para combinar as informações de *
 
 | id_pedido | quant_pedido | linha_producao | modelo | id_notebook | url_manual | fk_id_pedido |
 |----------|----------|----------|----------|----------|----------|----------|
-| 1        |  100     | azul     | 1        | A | https://res.cloudinary.com/inteli/image/123.jpg | 1 |
-| 2        |  200     | laranja  | 2        | B | https://res.cloudinary.com/inteli/image/321.jpg | 2 |
-| 3        |  300     | verde    | 3        | C | https://res.cloudinary.com/inteli/image/30.jpg  | 3 |
-| 4        |  400     | vermelho | 4        | D | https://res.cloudinary.com/inteli/image/10.jpg  | 4 |
+| 1        |  100     | azul     | A | 1 | https://res.cloudinary.com/inteli/image/123.jpg | 1 |
+| 2        |  200     | laranja  | B | 2 | https://res.cloudinary.com/inteli/image/321.jpg | 2 |
+| 3        |  300     | verde    | C | 3 | https://res.cloudinary.com/inteli/image/30.jpg  | 3 |
+| 4        |  400     | vermelho | D | 4 | https://res.cloudinary.com/inteli/image/10.jpg  | 4 |
 
 
 A junção interna de tudo o que está referenciado de forma correta entre as tabelas **pedidos** e **notebooks**. 
