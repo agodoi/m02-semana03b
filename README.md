@@ -47,11 +47,19 @@ Nessa planilha de Pedidos, tem-se os pedidos identificados de 1 a 4, mas apenas 
 |----------|----------|----------|----------|
 | 1        | 1001     | https://res.cloudinary.com/inteli/image/123.jpg | 1 |
 | 2        | 1002     | https://res.cloudinary.com/inteli/image/321.jpg | 2 |
-| 3        | 1003     | https://res.cloudinary.com/inteli/image/30.jpg | 3 |
-| 4        | 1004     | https://res.cloudinary.com/inteli/image/10.jpg | 4 |
+| 3        | 1003     | https://res.cloudinary.com/inteli/image/30.jpg  | 3 |
+| 4        | 1004     | https://res.cloudinary.com/inteli/image/10.jpg  | 4 |
 
 
-Se aplicar **INNER JOIN** para combinar as informações de **Clientes** com os **Pedidos**, o resultado será:
+Se aplicar **INNER JOIN** (JUNÇÃO INTERNA) para combinar as informações de **pedidos** com os **notebooks**, o resultado será:
+
+| id_pedido | quant_pedido | responsavel_pedido | linha_producao | id_notebook | id_manual  | url_manual | id_pedido |
+|----------|----------|----------|----------|----------|----------|----------|----------|
+| 1        |  100     | Ana      | azul     | 1        | 1001     | https://res.cloudinary.com/inteli/image/123.jpg | 1 |
+| 2        |  200     | Beatriz  | laranja  | 2        | 1002     | https://res.cloudinary.com/inteli/image/321.jpg | 2 |
+| 3        |  300     | Carla    | verde    | 3        | 1003     | https://res.cloudinary.com/inteli/image/30.jpg  | 3 |
+| 4        |  400     | Pedro    | vermelho | 4        | 1004     | https://res.cloudinary.com/inteli/image/10.jpg  | 4 |
+
 
 Em outra palavras, vamos selecionar o **id_customer**, **name** e **country** da tabela "Clientes", bem como o **id_order** e **value** da tabela **Pedidos**, combinando os registros onde o **id_customer** é igual em ambas as tabelas.
 
