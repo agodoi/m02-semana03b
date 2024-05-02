@@ -51,7 +51,7 @@ Nessa planilha de Pedidos, tem-se os pedidos identificados de 1 a 4, mas apenas 
 | 4        | https://res.cloudinary.com/inteli/image/10.jpg  | 4 |
 
 
-Se aplicar **INNER JOIN** (JUNÇÃO INTERNA) para combinar as informações de **pedidos** com os **notebooks**, o resultado será:
+Se aplicar **INNER JOIN** (JUNÇÃO INTERNA) para combinar as informações de **pedidos** com os **notebooks**, o resultado será a junção interna de tudo o que está referenciado de forma correta entre as tabelas **pedidos** e **notebooks**. Veja:
 
 | id_pedido | quant_pedido | linha_producao | modelo | id_notebook | url_manual | fk_id_pedido |
 |----------|----------|----------|----------|----------|----------|----------|
@@ -61,7 +61,6 @@ Se aplicar **INNER JOIN** (JUNÇÃO INTERNA) para combinar as informações de *
 | 4        |  400     | vermelho | D | 4 | https://res.cloudinary.com/inteli/image/10.jpg  | 4 |
 
 
-A junção interna de tudo o que está referenciado de forma correta entre as tabelas **pedidos** e **notebooks**. 
 
 
 ## Tipos de Join
