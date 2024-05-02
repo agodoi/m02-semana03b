@@ -230,7 +230,7 @@ Caso você não tenha instalado o Sails no seu PC, faça:
 
 * #### Instale o NodeJS baixando o installer [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
-* #### Vá no seu terminal e digite ```npm install sails -g```. Curiosidade: nmp = Node Package Manager
+* #### Vá no seu terminal e digite ```npm install sails -g```. Curiosidade: npm = Node Package Manager
 
 * Maiores detalhes do Sails em [https://sailsjs.com/get-started](https://sailsjs.com/get-started)
 
