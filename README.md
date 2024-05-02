@@ -43,12 +43,12 @@ Por exemplo, suponha que você tenha uma tabela de pedidos de produção de note
 
 Nessa planilha de Pedidos, tem-se os pedidos identificados de 1 a 4, mas apenas os clientes 1, 2 e 4 consumiram algum valor.
 
-| id_notebook | id_manual  | url_manual | fk_id_pedido |
-|----------|----------|----------|----------|
-| 1        | 1001     | https://res.cloudinary.com/inteli/image/123.jpg | 1 |
-| 2        | 1002     | https://res.cloudinary.com/inteli/image/321.jpg | 2 |
-| 3        | 1003     | https://res.cloudinary.com/inteli/image/30.jpg  | 3 |
-| 4        | 1004     | https://res.cloudinary.com/inteli/image/10.jpg  | 4 |
+| id_notebook | url_manual | fk_id_pedido |
+|----------|----------|----------|
+| 1        | https://res.cloudinary.com/inteli/image/123.jpg | 1 |
+| 2        | https://res.cloudinary.com/inteli/image/321.jpg | 2 |
+| 3        | https://res.cloudinary.com/inteli/image/30.jpg  | 3 |
+| 4        | https://res.cloudinary.com/inteli/image/10.jpg  | 4 |
 
 
 Se aplicar **INNER JOIN** (JUNÇÃO INTERNA) para combinar as informações de **pedidos** com os **notebooks**, o resultado será:
