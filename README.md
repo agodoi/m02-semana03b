@@ -21,9 +21,50 @@ Essa condição é especificada na cláusula ON ou usando a cláusula WHERE.
 
 ## Quando usar?
 
-Quando você tem dados distribuídos em várias tabelas e precisa extrair informações combinadas dessas tabelas.
+Quando você tem dados distribuídos em várias tabelas e precisa consultar informações (fazer um **SELECT**) combinadas dessas tabelas.
 
-Por exemplo, suponha que você tenha uma tabela de clientes e outra de pedidos. Para obter informações sobre quais clientes fizeram quais pedidos, você precisa combinar os dados dessas duas tabelas usando JOIN.
+## No seu projeto
+
+Por exemplo, suponha que você tenha uma tabela de pedidos de produção de notebooks que pode ser enviado à linha de produção. E você tem uma tabela de manuais de notebooks.
+
+* **Vou manter o português para facilitar o entendimento, mas depois a gente traduz os trem.**
+
+### Planilha pedidos
+
+| id_pedido | quant_pedido | responsavel_pedido | linha_producao |
+|----------|----------|----------|----------|
+| 1        |  100     | Ana      | azul     |
+| 2        |  200     | Beatriz  | laranja  |
+| 3        |  300     | Carla    | verde    |
+| 4        |  400     | Pedro    | vermelho |
+
+
+### Planilha notebooks
+
+Nessa planilha de Pedidos, tem-se os pedidos identificados de 1 a 4, mas apenas os clientes 1, 2 e 4 consumiram algum valor.
+
+| id_notebook | id_manual  | url_manual | id_pedido |
+|----------|----------|----------|----------|
+| 1        | 1001     | https://res.cloudinary.com/inteli/image/123.jpg | 1 |
+| 2        | 1002     | https://res.cloudinary.com/inteli/image/321.jpg | 2 |
+| 3        | 1003     | https://res.cloudinary.com/inteli/image/30.jpg | 3 |
+| 4        | 1004     | https://res.cloudinary.com/inteli/image/10.jpg | 4 |
+
+
+Se aplicar **INNER JOIN** para combinar as informações de **Clientes** com os **Pedidos**, o resultado será:
+
+Em outra palavras, vamos selecionar o **id_customer**, **name** e **country** da tabela "Clientes", bem como o **id_order** e **value** da tabela **Pedidos**, combinando os registros onde o **id_customer** é igual em ambas as tabelas.
+
+| id_customer | name  | country  | id_order | value |
+|----------|----------|----------|----------|----------|
+| 1        | João     | Brasil   |  1       | 100      |
+| 2        | Pedro    | Chile    |  3       | 150      |
+| 2        | Pedro    | Chile    |  4       | 300      |
+| 4        | Ana      | EUA      |  2       | 200      |
+
+
+
+clientes e outra de pedidos. Para obter informações sobre quais clientes fizeram quais pedidos, você precisa combinar os dados dessas duas tabelas usando JOIN.
 
 ## Tipos de Join
 
