@@ -228,7 +228,7 @@ Vamos criar uma aplicação Sails do tipo WebApp e conectar o seu banco de dados
 
 Caso você não tenha instalado o Sails no seu PC, faça:
 
-* #### Instale o NodeJS baixando [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+* #### Instale o NodeJS baixando o installer [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
 * #### Vá no seu terminal e digite ```npm install sails -g```
 
