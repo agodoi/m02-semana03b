@@ -249,11 +249,15 @@ Vamos criar uma aplicação Sails do tipo WebApp e conectar o seu banco de dados
 
 1.6) Entre no seu [https://dashboard.render.com/](https://dashboard.render.com/) com a sua conta particular, e clique no botão **Connect** no canto direito superior e vá na aba **External Connection** e pegue a URL do campo **Connect from services outside of Render**. Usa URL é aquela que possui o nome do host, senha, banco de dados, etc. Copia e cola isso em um canto do seu computador.
 
-1.7) Vamos conectar o seu banco através do Sails. Vá na seguinte pasta do seu projeto Sails:
+1.7) Vamos preparar a conexão do seu banco através do Sails. Vá na seguinte pasta do seu projeto Sails:
 * **Config** (onde ficam as conexões)
 	* **datastores.js** (são as suas conexões de qualquer banco, tipo MySQL, PostgreSQL, etc)
  		* **linha 51** onde tem ```// adapter: 'sails-mysql',```, apague e substitua por ```adapter: 'sails-postgresql',``` sem as // barras
-   		* **linha 52** adicione ```url: postgres://bdgodoi_user:ZmTVzKJXGWyB65nRGeW7S2AkMUEI3gZ1@dpg-cojpieu3e1ms73bflb6g-a.oregon-postgres.render.com/bdgodoi``` 		
+   		* **linha 52** adicione ```url: 'postgres://bdgodoi_user:ZmTVzKJXGWyB65nRGeW7S2AkMUEI3gZ1@dpg-cojpieu3e1ms73bflb6g-a.oregon-postgres.render.com/bdgodoi'``` 1.8) Vá na pasta para você conhecer as tabelas (emailAddress, emailStatus, emailChangeCandidate, etc) padrões que o Sails vai criar no seu banco de dados no Render:
+	* **api**
+		* **models**
+      			* **User.js** 
+1.9) Volte no terminal CMD e digite **sails lift** [enter] e aguarde **info: Starting app...**
 
 ## Conclusões
 
