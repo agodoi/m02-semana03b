@@ -58,70 +58,115 @@ Se aplicar **INNER JOIN** (JUNÇÃO INTERNA) para combinar as informações de *
 | 2        |  200     | laranja  | B | 2 | https://res.cloudinary.com/inteli/image/321.jpg | 2 |
 | 3        |  300     | verde    | C | 3 | https://res.cloudinary.com/inteli/image/30.jpg  | 3 |
 
-Nesse caso, os itens 2 e 3.
+Nesse caso, os itens 2 e 3 estão corretamente referenciados, logo, aparecerão como resultado do INNER JOIN porque ele retorna linhas que têm valores correspondentes em ambas as tabelas.
+
 
 ## Outros Join
-
-* INNER JOIN --> retorna linhas que têm valores correspondentes em ambas as tabelas.
-
-Os joins mais usados são:
 
 * LEFT JOIN --> retorna linhas da tabela da esquerda e as linhas correspondentes da tabela da direita. Se não houver correspondência, os valores NULL são retornados da tabela da direita.
 * RIGHT JOIN --> retorna as linhas da tabela da direita e as linhas correspondentes da tabela da esquerda. Se não houver correspondência, os valores NULL são retornados da tabela da esquerda.
 * FULL JOIN --> retorna linhas quando há uma correspondência em uma das tabelas. As colunas da outra tabela terão valores NULL quando não houver correspondência.
 
 
-### Planilha Clientes
+```
+DROP TABLE IF EXISTS pessoasHerois CASCADE;
 
-| id_customer | name | country |
-|----------|----------|----------|
-| 1   | João   | Brasil   |
-| 2   | Pedro   | Chile   |
-| 3   | Rafael |   França |
-| 4   | Ana   | EUA   |
+create table pessoasHerois(
+id SERIAL primary key,
+cpf VARCHAR(11) not null,
+nome VARCHAR(50) not null,
+sobrenome VARCHAR(50) not null,
+idade VARCHAR(50) null
+);
 
+DROP TABLE IF EXISTS caracteristicas CASCADE;
 
-### Planilha Pedidos
-
-Nessa planilha de Pedidos, tem-se os pedidos identificados de 1 a 4, mas apenas os clientes 1, 2 e 4 consumiram algum valor.
-
-| id_order | id_customer  | value |
-|----------|----------|----------|
-| 1        | 1        | 100      |
-| 2        | 4        | 200      |
-| 3        | 2        | 150      |
-| 4        | 2        | 300      |
-
-
-Se aplicar **INNER JOIN** para combinar as informações de **Clientes** com os **Pedidos**, o resultado será:
-
-Em outra palavras, vamos selecionar o **id_customer**, **name** e **country** da tabela "Clientes", bem como o **id_order** e **value** da tabela **Pedidos**, combinando os registros onde o **id_customer** é igual em ambas as tabelas.
-
-| id_customer | name  | country  | id_order | value |
-|----------|----------|----------|----------|----------|
-| 1        | João     | Brasil   |  1       | 100      |
-| 2        | Pedro    | Chile    |  3       | 150      |
-| 2        | Pedro    | Chile    |  4       | 300      |
-| 4        | Ana      | EUA      |  2       | 200      |
+create table caracteristicas(
+id SERIAL primary key,
+funcao VARCHAR(50) not null,
+acessorio VARCHAR(50) not null,
+uniforme VARCHAR(50) null,
+chaveForeign INT,
+foreign key (chaveForeign) references pessoasHerois (id)
+);
 
 
-Note que a coluna **id_customer** está em ordem crescente, e o JOIN INNER juntou as duas tabelas **Clientes** e **Pedidos**.
+-- fazendo um CRUD (Create, Read, Update, Delete)
 
-### Tabela Clientes
+--Fazendo o Create
+insert into pessoasHerois (cpf, nome, sobrenome, idade)
+values 	('12345678900', 'Capitão', 'América', '32'),
+		('00123456789', 'Tony', 'Stark', '39'),
+		('98765432100', 'Nick', 'Fury', '55'),
+		('54321678900', 'Thor', 'Deus do Trovão', '35'),
+		('123456', 'Pantera', 'Negra', '40' );
+	
+insert into pessoasHerois (cpf, nome, sobrenome, idade)
+values 	
 
-**Primary key =** id_customer
+insert into caracteristicas (funcao, acessorio, uniforme)
+values 	('proteger', 'escudo', 'azul e vermelho'),
+		('criar máquinas', 'robôs', 'vermelho'),
+		('gerenciar', 'arma', 'preto'),
+		('proteger', 'martelo', 'preto e vermelho'),
+		('prot', 'mar', 'pre');
+--note que não inserimos dado na chaveForeign key nesse insert
+	
+	
+--serve para selecionar o nome Tony na tabela
+select * from pessoasHerois where nome = 'Tony'
 
-### Tabela Pedidos
+--serve para selecionar nomes com T na tabela
+SELECT * FROM pessoasHerois WHERE nome LIKE 'T%'
 
-**Primary key =** id_order
 
-**Foreign key** = id_customer
+--Fazendo o Delete da coluna 1
+delete from pessoasHerois where id=1
+
+-- serve para atualizar um item id da tabela
+update pessoasHerois 
+SET nome = 'Capitão'
+WHERE id = 2
+
+
+--atualizando as chaveForeigns que não foram contempladas no 
+--insert original acima
+UPDATE caracteristicas
+SET chaveForeign = 1
+WHERE id = 1;
+
+UPDATE caracteristicas
+SET chaveForeign = 2
+WHERE id = 2;
+
+UPDATE caracteristicas
+SET chaveForeign = 3
+WHERE id = 3;
+
+UPDATE caracteristicas
+SET chaveForeign = 4
+WHERE id = 4;
+
+SELECT pessoasHerois.nome, pessoasHerois.sobrenome, caracteristicas.acessorio, caracteristicas.uniforme
+FROM pessoasHerois
+INNER JOIN caracteristicas ON pessoasHerois.id = caracteristicas.chaveForeign;
+
+SELECT pessoasHerois.nome, pessoasHerois.sobrenome, caracteristicas.acessorio, caracteristicas.uniforme
+FROM pessoasHerois
+LEFT JOIN caracteristicas ON pessoasHerois.id = caracteristicas.chaveForeign;
+
+SELECT pessoasHerois.nome, pessoasHerois.sobrenome, caracteristicas.acessorio, caracteristicas.uniforme
+FROM pessoasHerois
+RIGHT JOIN caracteristicas ON pessoasHerois.id = caracteristicas.chaveForeign;
+
+SELECT pessoasHerois.nome, pessoasHerois.sobrenome, caracteristicas.acessorio, caracteristicas.uniforme
+FROM pessoasHerois
+FULL JOIN caracteristicas ON pessoasHerois.id = caracteristicas.chaveForeign;
+
 
 ```
-SELECT Clientes.id_customer, Clientes.name, Clientes.country, Pedidos.id_order, Pedidos.value
-FROM Clientes
-INNER JOIN Pedidos ON Clientes.id_customer = Pedidos.id_customer;
-```
+
+
 
 ## Paralelo com o Excel
 
