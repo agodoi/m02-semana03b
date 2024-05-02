@@ -31,12 +31,12 @@ Por exemplo, suponha que você tenha uma tabela de pedidos de produção de note
 
 ### Planilha pedidos
 
-| id_pedido | quant_pedido | responsavel_pedido | linha_producao |
-|----------|----------|----------|----------|
-| 1        |  100     | Ana      | azul     |
-| 2        |  200     | Beatriz  | laranja  |
-| 3        |  300     | Carla    | verde    |
-| 4        |  400     | Pedro    | vermelho |
+| id_pedido | quant_pedido | linha_producao |
+|----------|----------|----------|
+| 1        |  100     | azul     |
+| 2        |  200     | laranja  |
+| 3        |  300     | verde    |
+| 4        |  400     | vermelho |
 
 
 ### Planilha notebooks
@@ -53,12 +53,12 @@ Nessa planilha de Pedidos, tem-se os pedidos identificados de 1 a 4, mas apenas 
 
 Se aplicar **INNER JOIN** (JUNÇÃO INTERNA) para combinar as informações de **pedidos** com os **notebooks**, o resultado será:
 
-| id_pedido | quant_pedido | responsavel_pedido | linha_producao | id_notebook | id_manual  | url_manual | id_pedido |
-|----------|----------|----------|----------|----------|----------|----------|----------|
-| 1        |  100     | Ana      | azul     | 1        | 1001     | https://res.cloudinary.com/inteli/image/123.jpg | 1 |
-| 2        |  200     | Beatriz  | laranja  | 2        | 1002     | https://res.cloudinary.com/inteli/image/321.jpg | 2 |
-| 3        |  300     | Carla    | verde    | 3        | 1003     | https://res.cloudinary.com/inteli/image/30.jpg  | 3 |
-| 4        |  400     | Pedro    | vermelho | 4        | 1004     | https://res.cloudinary.com/inteli/image/10.jpg  | 4 |
+| id_pedido | quant_pedido | linha_producao | id_notebook | id_manual  | url_manual | id_pedido |
+|----------|----------|----------|----------|----------|----------|----------|
+| 1        |  100     | azul     | 1        | 1001     | https://res.cloudinary.com/inteli/image/123.jpg | 1 |
+| 2        |  200     | laranja  | 2        | 1002     | https://res.cloudinary.com/inteli/image/321.jpg | 2 |
+| 3        |  300     | verde    | 3        | 1003     | https://res.cloudinary.com/inteli/image/30.jpg  | 3 |
+| 4        |  400     | vermelho | 4        | 1004     | https://res.cloudinary.com/inteli/image/10.jpg  | 4 |
 
 
 Em outra palavras, vamos selecionar o **id_customer**, **name** e **country** da tabela "Clientes", bem como o **id_order** e **value** da tabela **Pedidos**, combinando os registros onde o **id_customer** é igual em ambas as tabelas.
