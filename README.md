@@ -219,6 +219,12 @@ ORDER BY t.idade DESC, d.idade ASC;
 * t.idade DESC: estamos ordenando a idade do tutor em ordem decrescente (do maior para o menor).
 * d.idade ASC: estamos ordenando a idade do cachorro em ordem crescente (do menor para o maior).
 
+
+## Conectando seu Render no Sails
+
+Vamos criar uma aplicação Sails do tipo WebApp e conectar o seu banco de dados que está no [https://dashboard.render.com/](https://dashboard.render.com/)
+
+
 ## Conclusões
 
 No seu projeto, cabe o INNER e o LEFT.
