@@ -250,8 +250,8 @@ Vamos criar uma aplicação Sails do tipo WebApp e conectar o seu banco de dados
 1.6) Entre no seu [https://dashboard.render.com/](https://dashboard.render.com/) com a sua conta particular, e clique no botão **Connect** no canto direito superior e vá na aba **External Connection** e pegue a URL do campo **Connect from services outside of Render**. Usa URL é aquela que possui o nome do host, senha, banco de dados, etc. Copia e cola isso em um canto do seu computador.
 
 1.7) Vamos conectar o seu banco através do Sails. Vá na seguinte pasta do seu projeto Sails:
-* **Config**
-	* **datastores.js** são as suas conexões de qualquer banco, tipo MySQL, PostgreSQL, etc
+* **Config** (onde ficam as conexões)
+	* **datastores.js** (são as suas conexões de qualquer banco, tipo MySQL, PostgreSQL, etc)
  		* **vá na linha 51** onde tem ```// adapter: 'sails-mysql',```
 
 ## Conclusões
