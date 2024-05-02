@@ -238,13 +238,21 @@ Vamos criar uma aplicação Sails do tipo WebApp e conectar o seu banco de dados
 
 1.3) Na raiz da pasta, clique no arquivo **package.json** (penúltimo arquivo do menu vertical da esquerda). Aí dentro tem todas as dependências. Como estamos trabalhando com o **PostgreSQL**, não há pacotes default para ele. Então temos, que puxar manualmente. Então, digite **sails postgresql** no Google, e você vai cair nesse site [https://www.npmjs.com/package/sails-postgresql](https://www.npmjs.com/package/sails-postgresql)
 
-1.4) Para instalar a biblioteca do **PostgreSQL no terminal usando esse comando ```npm i sails-postgresql```
-
+1.4) Para instalar a biblioteca do **PostgreSQL no terminal, digite esse comando ```npm i sails-postgresql```. Quando terminar, vá no arquivo **package.json** que você vai encontrar o que a seta vermelha está apontando.
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_com_postgresql.png">
    <img alt="Desespero" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_com_postgresql.png)">
 </picture>
+
+1.5) Dê um ```npm install``` na raiz do seu projeto Sails para garantir que todas as instâncias foram baixadas e instaladas no PC.
+
+1.6) Entre no seu [https://dashboard.render.com/](https://dashboard.render.com/) com a sua conta particular, e clique no botão **Connect** no canto direito superior e vá na aba **External Connection** e pegue a URL do campo **Connect from services outside of Render**. Usa URL é aquela que possui o nome do host, senha, banco de dados, etc. Copia e cola isso em um canto do seu computador.
+
+1.7) Vamos conectar o seu banco através do Sails. Vá na seguinte pasta do seu projeto Sails:
+	**Config**
+ 		**datastores.js** são as suas conexões de qualquer banco, tipo MySQL, PostgreSQL, etc
+   			**vá na linha 51** onde tem ```// adapter: 'sails-mysql',```
 
 ## Conclusões
 
