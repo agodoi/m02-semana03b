@@ -169,3 +169,11 @@ SELECT pessoasHerois.nome, pessoasHerois.sobrenome, caracteristicas.acessorio, c
 FROM pessoasHerois
 FULL JOIN caracteristicas ON pessoasHerois.id = caracteristicas.chaveForeign;
 ```
+
+## Conclusões
+
+No seu projeto, cabe o INNER e o LEFT.
+
+INNER para juntar duas tabelas totalmente lisas e referenciadas sem problemas.
+
+LEFT serveria para vc emitir um relatório entre as tabela **pedidos** e **notebooks** e o que vier **NULL** na tabela **notebooks** siginfica que são manuais sem referência, perdidos ou obsoletos no seu banco de dados.
