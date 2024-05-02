@@ -266,8 +266,8 @@ Vamos criar uma aplicação Sails do tipo WebApp e conectar o seu banco de dados
 1.10) Se você chegou nessa tela abaixo, então você teve sucesso na sua conexão do Render através do Sails.
 
 <picture>
-   <source media="(prefers-color-scheme: light)" srcset="">
-   <img alt="Desespero" src="[YOUR-DEFAULT-IMAGE]()">
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_conexao_ok.png">
+   <img alt="Sails ok" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_conexao_ok.png)">
 </picture>
 
 
