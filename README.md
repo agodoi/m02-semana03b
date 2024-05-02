@@ -31,12 +31,12 @@ Por exemplo, suponha que você tenha uma tabela de pedidos de produção de note
 
 ### Planilha pedidos
 
-| id_pedido | quant_pedido | linha_producao |
-|----------|----------|----------|
-| 1        |  100     | azul     |
-| 2        |  200     | laranja  |
-| 3        |  300     | verde    |
-| 4        |  400     | vermelho |
+| id_pedido | quant_pedido | linha_producao | modelo |
+|----------|----------|----------|----------|
+| 1        |  100     | azul     | A        |
+| 2        |  200     | laranja  | B        |
+| 3        |  300     | verde    | C        |
+| 4        |  400     | vermelho | D        |
 
 
 ### Planilha notebooks
@@ -53,26 +53,16 @@ Nessa planilha de Pedidos, tem-se os pedidos identificados de 1 a 4, mas apenas 
 
 Se aplicar **INNER JOIN** (JUNÇÃO INTERNA) para combinar as informações de **pedidos** com os **notebooks**, o resultado será:
 
-| id_pedido | quant_pedido | linha_producao | id_notebook | url_manual | fk_id_pedido |
-|----------|----------|----------|----------|----------|----------|
-| 1        |  100     | azul     | 1        | https://res.cloudinary.com/inteli/image/123.jpg | 1 |
-| 2        |  200     | laranja  | 2        | https://res.cloudinary.com/inteli/image/321.jpg | 2 |
-| 3        |  300     | verde    | 3        | https://res.cloudinary.com/inteli/image/30.jpg  | 3 |
-| 4        |  400     | vermelho | 4        | https://res.cloudinary.com/inteli/image/10.jpg  | 4 |
+| id_pedido | quant_pedido | linha_producao | modelo | id_notebook | url_manual | fk_id_pedido |
+|----------|----------|----------|----------|----------|----------|----------|
+| 1        |  100     | azul     | 1        | A | https://res.cloudinary.com/inteli/image/123.jpg | 1 |
+| 2        |  200     | laranja  | 2        | B | https://res.cloudinary.com/inteli/image/321.jpg | 2 |
+| 3        |  300     | verde    | 3        | C | https://res.cloudinary.com/inteli/image/30.jpg  | 3 |
+| 4        |  400     | vermelho | 4        | D | https://res.cloudinary.com/inteli/image/10.jpg  | 4 |
 
 
-Em outra palavras, vamos selecionar o **id_customer**, **name** e **country** da tabela "Clientes", bem como o **id_order** e **value** da tabela **Pedidos**, combinando os registros onde o **id_customer** é igual em ambas as tabelas.
+A junção interna de tudo o que está referenciado de forma correta entre as tabelas **pedidos** e **notebooks**. 
 
-| id_customer | name  | country  | id_order | value |
-|----------|----------|----------|----------|----------|
-| 1        | João     | Brasil   |  1       | 100      |
-| 2        | Pedro    | Chile    |  3       | 150      |
-| 2        | Pedro    | Chile    |  4       | 300      |
-| 4        | Ana      | EUA      |  2       | 200      |
-
-
-
-clientes e outra de pedidos. Para obter informações sobre quais clientes fizeram quais pedidos, você precisa combinar os dados dessas duas tabelas usando JOIN.
 
 ## Tipos de Join
 
