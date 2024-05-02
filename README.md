@@ -53,7 +53,7 @@ Nessa planilha de Pedidos, tem-se os pedidos identificados de 1 a 4, mas apenas 
 
 Se aplicar **INNER JOIN** (JUNÇÃO INTERNA) para combinar as informações de **pedidos** com os **notebooks**, o resultado será:
 
-| id_pedido | quant_pedido | linha_producao | id_notebook | id_manual  | url_manual | id_pedido |
+| id_pedido | quant_pedido | linha_producao | id_notebook | id_manual  | url_manual | fk |
 |----------|----------|----------|----------|----------|----------|----------|
 | 1        |  100     | azul     | 1        | 1001     | https://res.cloudinary.com/inteli/image/123.jpg | 1 |
 | 2        |  200     | laranja  | 2        | 1002     | https://res.cloudinary.com/inteli/image/321.jpg | 2 |
