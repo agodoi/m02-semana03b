@@ -254,7 +254,13 @@ Vamos criar uma aplicação Sails do tipo WebApp e conectar o seu banco de dados
 	* **datastores.js** (são as suas conexões de qualquer banco, tipo MySQL, PostgreSQL, etc)
  		* **linha 51** onde tem ```// adapter: 'sails-mysql',```, **apague** e substitua por ```adapter: 'sails-postgresql',``` sem as // barras
    		* **linha 52** adicione ```url: 'postgres://bdgodoi_user:ZmTVzKJXGWyB65nRGeW7S2AkMUEI3gZ1@dpg-cojpieu3e1ms73bflb6g-a.oregon-postgres.render.com/bdgodoi'```
-     		* **linha 53** adicione ```ssl: true```	
+     		* **linha 53** adicione ```ssl: true```
+  
+<picture>
+   <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_datastores.png">
+   <img alt="DataStores" src="[YOUR-DEFAULT-IMAGE](https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_datastores.png)">
+</picture>
+
 
 1.8) Vá na pasta para você conhecer as tabelas (emailAddress, emailStatus, emailChangeCandidate, etc) padrões que o Sails vai criar no seu banco de dados no Render:
 	* **api**
