@@ -236,7 +236,7 @@ Caso você não tenha instalado o Sails no seu PC, faça:
 
 ### Etapa 1 - Criando um novo projeto Sails
 
-1.1) Abra um terminal CMD, e digite ```sail new projetoDell``` e escolha **1. Web App** e aguarde alguns minutinhos para instalar as dependências;
+1.1) Abra um terminal CMD, e digite ```sails new projetoDell``` e escolha **1. Web App** e aguarde alguns minutinhos para instalar as dependências;
 
 1.2) Entre na pasta do seu **projetoDell** e digite ```code .``` para que essa pasta seja aberta no seu Visual Code;
 
