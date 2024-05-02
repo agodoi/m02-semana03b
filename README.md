@@ -31,21 +31,21 @@ Por exemplo, suponha que você tenha uma tabela de pedidos de produção de note
 
 ### Planilha pedidos
 
-| id_pedido | quant_pedido | linha_producao | modelo |
+Nessa planilha **pedidos** tem-se a identificação de cada pedido pelo **id_pedidos**, a quantidade de notebooks a serem produzidos em **quant_pedidos**, qual a cor da linha de produção em **linha_producao** que será produzido e o modelo de notebook que entrará em produção em **modelo_notebook**.
+
+| id_pedido | quant_pedido | linha_producao | modelo_notebook |
 |----------|----------|----------|----------|
 | 1        |  100     | azul     | A        |
 | 2        |  200     | laranja  | B        |
 | 3        |  300     | verde    | C        |
-| 4        |  400     | vermelho | D        |
 
 
 ### Planilha notebooks
 
-Nessa planilha de Pedidos, tem-se os pedidos identificados de 1 a 4, mas apenas os clientes 1, 2 e 4 consumiram algum valor.
+Nessa planilha de notebooks, tem-se as respectivas URL com fotos dos notebooks de 1 a 4.
 
-| id_notebook | url_manual | fk_id_pedido |
+| id_notebook | url_manual | pedido_id |
 |----------|----------|----------|
-| 1        | https://res.cloudinary.com/inteli/image/123.jpg | 1 |
 | 2        | https://res.cloudinary.com/inteli/image/321.jpg | 2 |
 | 3        | https://res.cloudinary.com/inteli/image/30.jpg  | 3 |
 | 4        | https://res.cloudinary.com/inteli/image/10.jpg  | 4 |
@@ -55,27 +55,20 @@ Se aplicar **INNER JOIN** (JUNÇÃO INTERNA) para combinar as informações de *
 
 | id_pedido | quant_pedido | linha_producao | modelo | id_notebook | url_manual | fk_id_pedido |
 |----------|----------|----------|----------|----------|----------|----------|
-| 1        |  100     | azul     | A | 1 | https://res.cloudinary.com/inteli/image/123.jpg | 1 |
 | 2        |  200     | laranja  | B | 2 | https://res.cloudinary.com/inteli/image/321.jpg | 2 |
 | 3        |  300     | verde    | C | 3 | https://res.cloudinary.com/inteli/image/30.jpg  | 3 |
-| 4        |  400     | vermelho | D | 4 | https://res.cloudinary.com/inteli/image/10.jpg  | 4 |
 
+Nesse caso, os itens 2 e 3.
 
+## Outros Join
 
-
-## Tipos de Join
+* INNER JOIN --> retorna linhas que têm valores correspondentes em ambas as tabelas.
 
 Os joins mais usados são:
 
-* INNER JOIN --> retorna linhas que têm valores correspondentes em ambas as tabelas.
 * LEFT JOIN --> retorna linhas da tabela da esquerda e as linhas correspondentes da tabela da direita. Se não houver correspondência, os valores NULL são retornados da tabela da direita.
 * RIGHT JOIN --> retorna as linhas da tabela da direita e as linhas correspondentes da tabela da esquerda. Se não houver correspondência, os valores NULL são retornados da tabela da esquerda.
 * FULL JOIN --> retorna linhas quando há uma correspondência em uma das tabelas. As colunas da outra tabela terão valores NULL quando não houver correspondência.
-* CROSS JOIN --> combina cada linha de uma tabela com todas as linhas da outra tabela, resultando em tabela A * tabela B. Cuidado que esse comando pode retornar um grande volume de dados.
-* Self JOIN --> une uma tabela a si mesma, permitindo consultas hierárquicas ou aninhadas.
-* UNION JOIN --> combina os resultados de duas ou mais consultas em um único conjunto de resultados.
-* EXCEPT JOIN --> retorna as linhas de uma tabela que não estão presentes em outra tabela.
-* INTERSECT JOIN --> retorna as linhas que estão presentes em ambas as tabelas.
 
 
 ### Planilha Clientes
