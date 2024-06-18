@@ -248,7 +248,7 @@ Caso você não tenha instalado o Sails no seu PC, faça:
 
 1.3) Na raiz da pasta, clique no arquivo **package.json** (penúltimo arquivo do menu vertical da esquerda). Aí dentro tem todas as dependências. Como estamos trabalhando com o **PostgreSQL**, não há pacotes default para ele. Então temos, que puxar manualmente. Então, digite **sails postgresql** no Google, e você vai cair nesse site [https://www.npmjs.com/package/sails-postgresql](https://www.npmjs.com/package/sails-postgresql)
 
-1.4) Para instalar a biblioteca do **PostgreSQL no terminal, digite esse comando ```npm i sails-postgresql```. Quando terminar, vá no arquivo **package.json** que você vai encontrar o que a seta vermelha está apontando.
+1.4) Para instalar a biblioteca do **PostgreSQL** no terminal, digite esse comando ```npm i sails-postgresql```. Quando terminar, vá no arquivo **package.json** que você vai encontrar o que a seta vermelha está apontando.
 
 <picture>
    <source media="(prefers-color-scheme: light)" srcset="https://github.com/agodoi/m02-semana03b/blob/main/imgs/sails_com_postgresql.png">
